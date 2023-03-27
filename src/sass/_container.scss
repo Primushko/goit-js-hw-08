@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: bisque;
+    @media screen and (min-width: 768px) {
+      width: 768px;
+      padding: 0 20px;
+      background-color: aqua;  
+    }
+    @media screen and (min-width: 1200px) {
+        background-color: pink;
+        width: 1200px;
+        padding: 0 10px;
+
+    }
+}
