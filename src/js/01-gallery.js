@@ -21,12 +21,12 @@ function onGalleryClick(event) {
     event.preventDefault();
     const target = event.target;
     if (target.nodeName !== `IMG`) {
-        return;
+    return;
     }
 
     let lightbox = new SimpleLightbox('.gallery a', {
-        captionsData: "alt",
-        captionDelay: 250,
+        captionsData: 'alt',
+        captionDelay: 250,    
     });
 }
-// console.log(galleryItems);
+console.log(galleryItems);
