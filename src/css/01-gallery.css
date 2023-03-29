@@ -41,6 +41,5 @@
   cursor: zoom-in;
 }
 li {
-  list-style-type: none;
-  /* Убираем маркеры */
+  list-style-type: none; 
 }
