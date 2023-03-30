@@ -28,5 +28,6 @@ function onGalleryClick(event) {
         captionsData: 'alt',
         captionDelay: 250,    
     });
+    lightbox.open();
 }
-console.log(galleryItems);
+// console.log(galleryItems);
