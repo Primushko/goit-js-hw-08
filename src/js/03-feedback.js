@@ -37,9 +37,12 @@ messageInput.addEventListener('input', throttle(saveStateToLocalStorage, 500));
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+    if (emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+        alert('Будь ласка, заповніть усі поля.');
+        return;
+    }
     clearFormAndLocalStorage();
 });
 
-// pfdjdjdj
 loadStateFromLocalStorage();
 
