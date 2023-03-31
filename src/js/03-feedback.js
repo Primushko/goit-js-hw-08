@@ -32,8 +32,8 @@ const clearFormAndLocalStorage = () => {
     console.log('Form submitted with values:', state);
 };
 
-emailInput.addEventListener('input', throttle(saveStateToLocalStorage, 500));
-messageInput.addEventListener('input', throttle(saveStateToLocalStorage, 500));
+form.addEventListener('input', throttle(saveStateToLocalStorage, 500));
+// messageInput.addEventListener('input', throttle(saveStateToLocalStorage, 500));
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
