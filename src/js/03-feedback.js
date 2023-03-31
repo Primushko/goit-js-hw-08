@@ -29,11 +29,14 @@ const clearFormAndLocalStorage = () => {
     localStorage.removeItem('feedback-form-state');
     emailInput.value = state.email;
     messageInput.value = state.message;
-    console.log('Form submitted with values:', state);
+    console.log('Form submitted with values:', {
+        email: emailInput.value,
+        message: messageInput.value,
+    });
 };
 
 form.addEventListener('input', throttle(saveStateToLocalStorage, 500));
-// messageInput.addEventListener('input', throttle(saveStateToLocalStorage, 500));
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
