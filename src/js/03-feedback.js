@@ -21,37 +21,21 @@ const loadStateFromLocalStorage = () => {
     }
 };
 
-// const clearFormAndLocalStorage = () => {
-//     const state = {
-//     email: ' ',
-//     message: ' ',
-//     };
-//     localStorage.removeItem('feedback-form-state');
-//     emailInput.value = state.email;
-//     messageInput.value = state.message;
-//     console.log('Form submitted with values:', {
-//         email: emailInput.value,
-//         message: messageInput.value,
-//     });
-// };
 const clearFormAndLocalStorage = () => {
-    console.log('Form submitted with values:', {
-    email: emailInput.value,
-    message: messageInput.value,
+    const state = {
+        email: ``,
+        message: ``,
+    };
+    console.log(`Form submitted with values:`, {
+        email: emailInput.value,
+        message: messageInput.value,
     });
     localStorage.removeItem('feedback-form-state');
     emailInput.value = state.email;
-    messageInput.value = state.message;
-    const state = {
-    email: ' ',
-    message: ' ',
-    };
+    messageInput.value = state.message;     
 };
 
-
-
 form.addEventListener('input', throttle(saveStateToLocalStorage, 500));
-
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
